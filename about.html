@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tekol</title>
+	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
+	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- food icons -->
+	<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+	<!-- demo styles -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- menu styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
+</head>
+
+<body>
+	<!-- Main container -->
+	<div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<!--<img src="https://image.flaticon.com/icons/png/512/107/107412.png"> -->
+				<h2 class="dummy-heading">Tekol</h2>
+			</div>
+		</header>
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Kleding</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Vering</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Chassis</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Electronica</a></li>
+                    <br>
+                    <br>
+                    <li><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="index.html">Terug</a></li>
+				</ul>
+				<!-- Submenu 1 -->
+				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Helmen</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-2]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-3]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-4]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-5]</a></li>
+				</ul>
+				<!-- Submenu 2 -->
+				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-6]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-7]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-8]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-9]</a></li>
+				</ul>
+				<!-- Submenu 2-1 -->
+				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-10]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-11]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-12]</a></li>
+				</ul>
+				<!-- Submenu 3 -->
+				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-13]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-14]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-15]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-16]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-17]</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-18]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-19]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-20]</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">[Item-21]</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="content">
+            <center><h1>Wie Zijn Wij?</h1></center>
+		</div>
+	</div>
+	<!-- /view -->
+	<script src="js/classie.js"></script>
+	<script src="js/dummydata.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				// breadcrumbsCtrl : true, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : false, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+	})();
+	</script>
+	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="19023a28-14d9-4b2d-ac3a-f5941965d591";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</body>
+
+</html>
